@@ -1,4 +1,6 @@
-use homeworks;
+-- 1. Создайте таблицу с мобильными телефонами, используя графический интерфейс. Заполните БД данными
+
+CREATE SCHEMA `homework` DEFAULT CHARACTER SET utf8mb3 ;
 
 CREATE TABLE `homeworks`.`phone` (
   `Id` INT NOT NULL AUTO_INCREMENT,
@@ -14,15 +16,14 @@ INSERT INTO `homeworks`.`phone` (`Manufacturer`, `Model`, `Price`, `Amount`) VAL
 INSERT INTO `homeworks`.`phone` (`Manufacturer`, `Model`, `Price`, `Amount`) VALUES ('Samsung', 'A52', '20000', '1');
 INSERT INTO `homeworks`.`phone` (`Manufacturer`, `Model`, `Price`, `Amount`) VALUES ('Nokia', '3310', '3000', '0');
 
-SELECT * FROM homeworks.phone;
+-- 2. Выведите название, производителя и цену для товаров, количество которых превышает 2
 
 SELECT Manufacturer, Model, Price
 FROM homeworks.phone
 WHERE amount > 2;
 
+-- 3. Выведите весь ассортимент товаров марки “Samsung”
+
 SELECT *
 FROM homeworks.phone
 WHERE Manufacturer = 'Samsung';
-
-select * FROM homeworks.phone
-where model = 's20';
