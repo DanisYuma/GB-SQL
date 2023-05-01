@@ -193,3 +193,4 @@ GROUP BY post
 having AVG(salary) > 50000;
 
 
+
