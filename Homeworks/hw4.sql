@@ -33,6 +33,7 @@ JOIN shops
 ON shops.id = cats.shops_id
 WHERE cats.name IN ('Murzik');
 
+
 -- 3.Вывести магазины, в которых НЕ продаются коты “Мурзик” и “Zuza
 
 SELECT shops.shopname AS shop
@@ -54,3 +55,9 @@ JOIN Analysis AS A
 ON A.an_id = O.ord_an
 WHERE O.ord_datetime > '2020-02-05' AND O.ord_datetime < '2020-02-12' -- Не нравится мне такое решение
 ORDER BY O.ord_datetime;
+
+/* Коммент от ревьюера
+Здравствуйте! 
+Задания выполнены правильно, единственное, в последнем задании даты нужно было включить то есть <= и >=, 
+либо вы могли использовать between, или вообще обозначить первую дату как переменную(вариантов огромное количество).
+*/
